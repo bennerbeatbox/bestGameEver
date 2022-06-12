@@ -180,12 +180,12 @@ public class HelloController {
     public boolean checkValidRectangle (Rectangle rectangle) {
         int newSquare = rectangles.indexOf(rectangle)+1;
         int difference = currentSquare-newSquare;
-        if (difference == 3 || difference == -3 || difference == 1 || difference == -1) {
-            return true;
-        }
-        else {
-            return false;
-        }
+        int corner = currentSquare % 3;
+        boolean up = difference == 3;
+        boolean down = difference == -3;
+        boolean right = (difference == -1 && corner != 0);
+        boolean left = (difference == 1 && corner != 1);
+        return (up || down || right  || left);
     }
 
     public void movePlayer(MouseEvent e) {
