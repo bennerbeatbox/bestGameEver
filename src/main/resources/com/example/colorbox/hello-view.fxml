@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.colorbox.HelloController">
+   <children>
+      <Label fx:id="levelLabel" layoutX="30.0" layoutY="21.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="136.0">
+         <font>
+            <Font name="Consolas" size="30.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="472.0" layoutY="21.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="136.0" text="Solved" textAlignment="CENTER">
+         <font>
+            <Font name="Consolas" size="30.0" />
+         </font>
+      </Label>
+      <Label fx:id="solvedLabel" alignment="CENTER" layoutX="472.0" layoutY="59.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="136.0" text="0/0" textAlignment="CENTER">
+         <font>
+            <Font name="Consolas" size="24.0" />
+         </font>
+      </Label>
+      <GridPane layoutX="315.0" layoutY="135.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="150.0" prefWidth="150.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="150.0" prefWidth="150.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="150.0" prefWidth="150.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="150.0" prefHeight="150.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="150.0" prefHeight="150.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="150.0" prefHeight="150.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Rectangle fx:id="rectangle1" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="150.0" onMouseClicked="#movePlayer" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="150.0" />
+            <Rectangle fx:id="rectangle2" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="150.0" onMouseClicked="#movePlayer" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="150.0" GridPane.columnIndex="1" />
+            <Rectangle fx:id="rectangle3" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="150.0" onMouseClicked="#movePlayer" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="150.0" GridPane.columnIndex="2" />
+            <Rectangle fx:id="rectangle4" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="150.0" onMouseClicked="#movePlayer" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="150.0" GridPane.rowIndex="1" />
+            <Rectangle fx:id="rectangle5" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="150.0" onMouseClicked="#movePlayer" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="150.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Rectangle fx:id="rectangle6" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="150.0" onMouseClicked="#movePlayer" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="150.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <Rectangle fx:id="rectangle7" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="150.0" onMouseClicked="#movePlayer" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="150.0" GridPane.rowIndex="2" />
+            <Rectangle fx:id="rectangle8" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="150.0" onMouseClicked="#movePlayer" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="150.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Rectangle fx:id="rectangle9" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="150.0" onMouseClicked="#movePlayer" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="150.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+         </children>
+      </GridPane>
+      <TextArea fx:id="textArea" editable="false" layoutX="640.0" layoutY="21.0" prefHeight="108.0" prefWidth="428.0">
+         <font>
+            <Font size="17.0" />
+         </font></TextArea>
+      <Button fx:id="startButton" layoutX="479.0" layoutY="20.0" mnemonicParsing="false" onAction="#start" prefHeight="79.0" prefWidth="136.0" text="Start">
+         <font>
+            <Font name="Consolas" size="30.0" />
+         </font>
+      </Button>
+      <Circle fx:id="playerCircle" layoutX="390.0" layoutY="210.0" radius="20.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+      <Button fx:id="resetButton" disable="true" layoutX="315.0" layoutY="20.0" mnemonicParsing="false" onAction="#resetLevel" prefHeight="59.0" prefWidth="115.0" text="Reset">
+         <font>
+            <Font name="Consolas" size="25.0" />
+         </font>
+      </Button>
+   </children>
+</Pane>
